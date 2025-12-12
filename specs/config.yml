@@ -1,0 +1,62 @@
+provider:
+  name: stdout
+
+data_sources:
+  app_group:
+    read:
+      path: /apps/stdout.eda.nokia.com
+      method: GET
+
+  cluster_standard_out:
+    read:
+      path: /apps/stdout.eda.nokia.com/v1alpha1/clusterstandardouts/{name}
+      method: GET
+
+  cluster_standard_out_list:
+    read:
+      path: /apps/stdout.eda.nokia.com/v1alpha1/clusterstandardouts
+      method: GET
+
+  resource_list:
+    read:
+      path: /apps/stdout.eda.nokia.com/v1alpha1
+      method: GET
+
+  standard_out:
+    read:
+      path: /apps/stdout.eda.nokia.com/v1alpha1/namespaces/{namespace}/standardouts/{name}
+      method: GET
+
+  standard_out_list:
+    read:
+      path: /apps/stdout.eda.nokia.com/v1alpha1/namespaces/{namespace}/standardouts
+      method: GET
+
+resources:
+  cluster_standard_out:
+    create:
+      path: /apps/stdout.eda.nokia.com/v1alpha1/clusterstandardouts
+      method: POST
+    read:
+      path: /apps/stdout.eda.nokia.com/v1alpha1/clusterstandardouts/{name}
+      method: GET
+    update:
+      path: /apps/stdout.eda.nokia.com/v1alpha1/clusterstandardouts/{name}
+      method: PUT
+    delete:
+      path: /apps/stdout.eda.nokia.com/v1alpha1/clusterstandardouts/{name}
+      method: DELETE
+
+  standard_out:
+    create:
+      path: /apps/stdout.eda.nokia.com/v1alpha1/namespaces/{namespace}/standardouts
+      method: POST
+    read:
+      path: /apps/stdout.eda.nokia.com/v1alpha1/namespaces/{namespace}/standardouts/{name}
+      method: GET
+    update:
+      path: /apps/stdout.eda.nokia.com/v1alpha1/namespaces/{namespace}/standardouts/{name}
+      method: PUT
+    delete:
+      path: /apps/stdout.eda.nokia.com/v1alpha1/namespaces/{namespace}/standardouts/{name}
+      method: DELETE

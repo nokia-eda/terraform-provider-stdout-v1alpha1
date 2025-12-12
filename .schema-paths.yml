@@ -1,0 +1,165 @@
+app_group:
+  - read:
+      path: /apps/stdout.eda.nokia.com
+      method: GET
+
+intent_targets:
+  - read:
+      path: /apps/stdout.eda.nokia.com/v1alpha1/clusterstandardouts/{name}/_targets
+      method: GET
+  - read:
+      path: /apps/stdout.eda.nokia.com/v1alpha1/namespaces/{namespace}/standardouts/{name}/_targets
+      method: GET
+
+k8_s_topology_request:
+  - create:
+      path: /apps/stdout.eda.nokia.com/v1alpha1/clusterstandardouts/{name}/_topology
+      method: POST
+  - create:
+      path: /apps/stdout.eda.nokia.com/v1alpha1/namespaces/{namespace}/standardouts/{name}/_topology
+      method: POST
+
+patch:
+  - update:
+      path: /apps/stdout.eda.nokia.com/v1alpha1/clusterstandardouts/{name}
+      method: PATCH
+  - update:
+      path: /apps/stdout.eda.nokia.com/v1alpha1/namespaces/{namespace}/standardouts/{name}
+      method: PATCH
+
+resource_history:
+  - read:
+      path: /apps/stdout.eda.nokia.com/v1alpha1/clusterstandardouts/{name}/_revs
+      method: GET
+  - read:
+      path: /apps/stdout.eda.nokia.com/v1alpha1/namespaces/{namespace}/standardouts/{name}/_revs
+      method: GET
+
+resource_list:
+  - read:
+      path: /apps/stdout.eda.nokia.com/v1alpha1
+      method: GET
+
+resource_topology:
+  - read:
+      path: /apps/stdout.eda.nokia.com/v1alpha1/clusterstandardouts/{name}/_topology
+      method: GET
+  - read:
+      path: /apps/stdout.eda.nokia.com/v1alpha1/namespaces/{namespace}/standardouts/{name}/_topology
+      method: GET
+
+status:
+  - delete:
+      path: /apps/stdout.eda.nokia.com/v1alpha1/clusterstandardouts/{name}
+      method: DELETE
+  - delete:
+      path: /apps/stdout.eda.nokia.com/v1alpha1/namespaces/{namespace}/standardouts/{name}
+      method: DELETE
+
+ui_result:
+  - read:
+      path: /apps/stdout.eda.nokia.com/v1alpha1/_ui/{pathname}
+      method: GET
+
+com.nokia.eda.stdout.v1alpha1.cluster_standard_out:
+  - create:
+      path: /apps/stdout.eda.nokia.com/v1alpha1/clusterstandardouts
+      method: POST
+  - read:
+      path: /apps/stdout.eda.nokia.com/v1alpha1/clusterstandardouts/{name}
+      method: GET
+  - update:
+      path: /apps/stdout.eda.nokia.com/v1alpha1/clusterstandardouts/{name}
+      method: PUT
+
+com.nokia.eda.stdout.v1alpha1.cluster_standard_out_list:
+  - read:
+      path: /apps/stdout.eda.nokia.com/v1alpha1/clusterstandardouts
+      method: GET
+  - delete:
+      path: /apps/stdout.eda.nokia.com/v1alpha1/clusterstandardouts
+      method: DELETE
+
+com.nokia.eda.stdout.v1alpha1.cluster_standard_out_deleted_resources:
+  - read:
+      path: /apps/stdout.eda.nokia.com/v1alpha1/clusterstandardouts/_deleted
+      method: GET
+
+com.nokia.eda.stdout.v1alpha1.standard_out:
+  - create:
+      path: /apps/stdout.eda.nokia.com/v1alpha1/namespaces/{namespace}/standardouts
+      method: POST
+  - read:
+      path: /apps/stdout.eda.nokia.com/v1alpha1/namespaces/{namespace}/standardouts/{name}
+      method: GET
+  - update:
+      path: /apps/stdout.eda.nokia.com/v1alpha1/namespaces/{namespace}/standardouts/{name}
+      method: PUT
+
+com.nokia.eda.stdout.v1alpha1.standard_out_list:
+  - read:
+      path: /apps/stdout.eda.nokia.com/v1alpha1/namespaces/{namespace}/standardouts
+      method: GET
+  - delete:
+      path: /apps/stdout.eda.nokia.com/v1alpha1/namespaces/{namespace}/standardouts
+      method: DELETE
+  - read:
+      path: /apps/stdout.eda.nokia.com/v1alpha1/standardouts
+      method: GET
+
+com.nokia.eda.stdout.v1alpha1.standard_out_deleted_resources:
+  - read:
+      path: /apps/stdout.eda.nokia.com/v1alpha1/namespaces/{namespace}/standardouts/_deleted
+      method: GET
+
+totalPaths: 16
+totalSchemas: 61
+usedSchemas: 15
+unusedSchemas: 46
+unusedSchemaList:
+  - AppGroupVersion
+  - ErrorIndex
+  - ErrorItem
+  - ErrorResponse
+  - IntentTarget
+  - K8SPatchOp
+  - OverlayState
+  - Resource
+  - ResourceHistoryEntry
+  - StatusDetails
+  - TopoAttrMetadata
+  - TopoAttribute
+  - TopoBoolExpression
+  - TopoBoolLiteral
+  - TopoElemMetadata
+  - TopoEndpointBoolExpression
+  - TopoField
+  - TopoFixedBoolExpression
+  - TopoLabelSelector
+  - TopoLiteralStatusOrBadge
+  - TopoLiteralValue
+  - TopoLogicalExpression
+  - TopoNodeGrouping
+  - TopoOverlayEndpoint
+  - TopoOverlayEndpointState
+  - TopoOverlayLink
+  - TopoOverlayLinkGroup
+  - TopoOverlayLinkGroupEndpoint
+  - TopoOverlayLinkState
+  - TopoOverlayNode
+  - TopoOverlayNodeOrGroup
+  - TopoOverlayNodeState
+  - TopoOverlayValue
+  - TopoSchema
+  - TopoStateFilter
+  - TopoValue
+  - TopoValueExpression
+  - Topology
+  - com.nokia.eda.stdout.v1alpha1.ClusterStandardOut_DeletedResourceEntry
+  - com.nokia.eda.stdout.v1alpha1.ClusterStandardOut_alarms
+  - com.nokia.eda.stdout.v1alpha1.ClusterStandardOut_deviations
+  - com.nokia.eda.stdout.v1alpha1.ClusterStandardOut_metadata
+  - com.nokia.eda.stdout.v1alpha1.StandardOut_DeletedResourceEntry
+  - com.nokia.eda.stdout.v1alpha1.StandardOut_alarms
+  - com.nokia.eda.stdout.v1alpha1.StandardOut_deviations
+  - com.nokia.eda.stdout.v1alpha1.StandardOut_metadata

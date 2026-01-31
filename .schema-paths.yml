@@ -19,14 +19,6 @@ k8_s_topology_request:
       path: /apps/stdout.eda.nokia.com/v1alpha1/namespaces/{namespace}/standardouts/{name}/_topology
       method: POST
 
-patch:
-  - update:
-      path: /apps/stdout.eda.nokia.com/v1alpha1/clusterstandardouts/{name}
-      method: PATCH
-  - update:
-      path: /apps/stdout.eda.nokia.com/v1alpha1/namespaces/{namespace}/standardouts/{name}
-      method: PATCH
-
 resource_history:
   - read:
       path: /apps/stdout.eda.nokia.com/v1alpha1/clusterstandardouts/{name}/_revs
@@ -71,6 +63,9 @@ com.nokia.eda.stdout.v1alpha1.cluster_standard_out:
   - update:
       path: /apps/stdout.eda.nokia.com/v1alpha1/clusterstandardouts/{name}
       method: PUT
+  - update:
+      path: /apps/stdout.eda.nokia.com/v1alpha1/clusterstandardouts/{name}
+      method: PATCH
 
 com.nokia.eda.stdout.v1alpha1.cluster_standard_out_list:
   - read:
@@ -95,6 +90,9 @@ com.nokia.eda.stdout.v1alpha1.standard_out:
   - update:
       path: /apps/stdout.eda.nokia.com/v1alpha1/namespaces/{namespace}/standardouts/{name}
       method: PUT
+  - update:
+      path: /apps/stdout.eda.nokia.com/v1alpha1/namespaces/{namespace}/standardouts/{name}
+      method: PATCH
 
 com.nokia.eda.stdout.v1alpha1.standard_out_list:
   - read:
@@ -114,8 +112,8 @@ com.nokia.eda.stdout.v1alpha1.standard_out_deleted_resources:
 
 totalPaths: 16
 totalSchemas: 61
-usedSchemas: 15
-unusedSchemas: 46
+usedSchemas: 14
+unusedSchemas: 47
 unusedSchemaList:
   - AppGroupVersion
   - ErrorIndex
@@ -124,6 +122,7 @@ unusedSchemaList:
   - IntentTarget
   - K8SPatchOp
   - OverlayState
+  - Patch
   - Resource
   - ResourceHistoryEntry
   - StatusDetails

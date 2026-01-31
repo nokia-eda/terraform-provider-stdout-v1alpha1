@@ -8,7 +8,7 @@ Path,Method,Schema,Model Name,Supported,Datasource,Resource
 /apps/stdout.eda.nokia.com/v1alpha1/clusterstandardouts/_deleted,GET,com.nokia.eda.stdout.v1alpha1.ClusterStandardOut_DeletedResources,,false,false,false
 /apps/stdout.eda.nokia.com/v1alpha1/clusterstandardouts/{name},DELETE,Status,cluster_standard_out,true,false,true
 /apps/stdout.eda.nokia.com/v1alpha1/clusterstandardouts/{name},GET,com.nokia.eda.stdout.v1alpha1.ClusterStandardOut,cluster_standard_out,true,true,true
-/apps/stdout.eda.nokia.com/v1alpha1/clusterstandardouts/{name},PATCH,Patch,,false,false,false
+/apps/stdout.eda.nokia.com/v1alpha1/clusterstandardouts/{name},PATCH,com.nokia.eda.stdout.v1alpha1.ClusterStandardOut,,false,false,false
 /apps/stdout.eda.nokia.com/v1alpha1/clusterstandardouts/{name},PUT,com.nokia.eda.stdout.v1alpha1.ClusterStandardOut,cluster_standard_out,true,false,true
 /apps/stdout.eda.nokia.com/v1alpha1/clusterstandardouts/{name}/_revs,GET,ResourceHistory,,false,false,false
 /apps/stdout.eda.nokia.com/v1alpha1/clusterstandardouts/{name}/_targets,GET,IntentTargets,,false,false,false
@@ -20,7 +20,7 @@ Path,Method,Schema,Model Name,Supported,Datasource,Resource
 /apps/stdout.eda.nokia.com/v1alpha1/namespaces/{namespace}/standardouts/_deleted,GET,com.nokia.eda.stdout.v1alpha1.StandardOut_DeletedResources,,false,false,false
 /apps/stdout.eda.nokia.com/v1alpha1/namespaces/{namespace}/standardouts/{name},DELETE,Status,standard_out,true,false,true
 /apps/stdout.eda.nokia.com/v1alpha1/namespaces/{namespace}/standardouts/{name},GET,com.nokia.eda.stdout.v1alpha1.StandardOut,standard_out,true,true,true
-/apps/stdout.eda.nokia.com/v1alpha1/namespaces/{namespace}/standardouts/{name},PATCH,Patch,,false,false,false
+/apps/stdout.eda.nokia.com/v1alpha1/namespaces/{namespace}/standardouts/{name},PATCH,com.nokia.eda.stdout.v1alpha1.StandardOut,,false,false,false
 /apps/stdout.eda.nokia.com/v1alpha1/namespaces/{namespace}/standardouts/{name},PUT,com.nokia.eda.stdout.v1alpha1.StandardOut,standard_out,true,false,true
 /apps/stdout.eda.nokia.com/v1alpha1/namespaces/{namespace}/standardouts/{name}/_revs,GET,ResourceHistory,,false,false,false
 /apps/stdout.eda.nokia.com/v1alpha1/namespaces/{namespace}/standardouts/{name}/_targets,GET,IntentTargets,,false,false,false

@@ -32,14 +32,6 @@ resource_list:
       path: /apps/stdout.eda.nokia.com/v1alpha1
       method: GET
 
-resource_topology:
-  - read:
-      path: /apps/stdout.eda.nokia.com/v1alpha1/clusterstandardouts/{name}/_topology
-      method: GET
-  - read:
-      path: /apps/stdout.eda.nokia.com/v1alpha1/namespaces/{namespace}/standardouts/{name}/_topology
-      method: GET
-
 status:
   - delete:
       path: /apps/stdout.eda.nokia.com/v1alpha1/clusterstandardouts/{name}
@@ -111,13 +103,11 @@ com.nokia.eda.stdout.v1alpha1.standard_out_deleted_resources:
       method: GET
 
 totalPaths: 16
-totalSchemas: 61
-usedSchemas: 14
-unusedSchemas: 47
+totalSchemas: 59
+usedSchemas: 13
+unusedSchemas: 46
 unusedSchemaList:
   - AppGroupVersion
-  - ErrorIndex
-  - ErrorItem
   - ErrorResponse
   - IntentTarget
   - K8SPatchOp
@@ -125,6 +115,7 @@ unusedSchemaList:
   - Patch
   - Resource
   - ResourceHistoryEntry
+  - ResourceTopology
   - StatusDetails
   - TopoAttrMetadata
   - TopoAttribute

@@ -12,6 +12,7 @@ Path,Method,Schema,Model Name,Supported,Datasource,Resource
 /apps/stdout.eda.nokia.com/v1alpha1/clusterstandardouts/{name},PUT,com.nokia.eda.stdout.v1alpha1.ClusterStandardOut,cluster_standard_out,true,false,true
 /apps/stdout.eda.nokia.com/v1alpha1/clusterstandardouts/{name}/_revs,GET,ResourceHistory,,false,false,false
 /apps/stdout.eda.nokia.com/v1alpha1/clusterstandardouts/{name}/_targets,GET,IntentTargets,,false,false,false
+/apps/stdout.eda.nokia.com/v1alpha1/clusterstandardouts/{name}/_topology,GET,ResourceTopology,,false,false,false
 /apps/stdout.eda.nokia.com/v1alpha1/clusterstandardouts/{name}/_topology,POST,K8STopologyRequest,,false,false,false
 /apps/stdout.eda.nokia.com/v1alpha1/namespaces/{namespace}/standardouts,DELETE,com.nokia.eda.stdout.v1alpha1.StandardOutList,,false,false,false
 /apps/stdout.eda.nokia.com/v1alpha1/namespaces/{namespace}/standardouts,GET,com.nokia.eda.stdout.v1alpha1.StandardOutList,standard_out_list,true,true,false
@@ -23,5 +24,6 @@ Path,Method,Schema,Model Name,Supported,Datasource,Resource
 /apps/stdout.eda.nokia.com/v1alpha1/namespaces/{namespace}/standardouts/{name},PUT,com.nokia.eda.stdout.v1alpha1.StandardOut,standard_out,true,false,true
 /apps/stdout.eda.nokia.com/v1alpha1/namespaces/{namespace}/standardouts/{name}/_revs,GET,ResourceHistory,,false,false,false
 /apps/stdout.eda.nokia.com/v1alpha1/namespaces/{namespace}/standardouts/{name}/_targets,GET,IntentTargets,,false,false,false
+/apps/stdout.eda.nokia.com/v1alpha1/namespaces/{namespace}/standardouts/{name}/_topology,GET,ResourceTopology,,false,false,false
 /apps/stdout.eda.nokia.com/v1alpha1/namespaces/{namespace}/standardouts/{name}/_topology,POST,K8STopologyRequest,,false,false,false
 /apps/stdout.eda.nokia.com/v1alpha1/standardouts,GET,com.nokia.eda.stdout.v1alpha1.StandardOutList,,false,false,false

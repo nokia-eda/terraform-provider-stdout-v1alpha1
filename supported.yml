@@ -1,0 +1,41 @@
+datasources:
+  - model_name: app_group
+    oas_endpoint: /apps/stdout.eda.nokia.com
+    oas_schema: AppGroup
+  - model_name: resource_list
+    oas_endpoint: /apps/stdout.eda.nokia.com/v1alpha1
+    oas_schema: ResourceList
+  - model_name: cluster_standard_out_list
+    oas_endpoint: /apps/stdout.eda.nokia.com/v1alpha1/clusterstandardouts
+    oas_schema: com.nokia.eda.stdout.v1alpha1.ClusterStandardOutList
+  - model_name: cluster_standard_out
+    oas_endpoint: /apps/stdout.eda.nokia.com/v1alpha1/clusterstandardouts/{name}
+    oas_schema: com.nokia.eda.stdout.v1alpha1.ClusterStandardOut
+  - model_name: standard_out_list
+    oas_endpoint: /apps/stdout.eda.nokia.com/v1alpha1/namespaces/{namespace}/standardouts
+    oas_schema: com.nokia.eda.stdout.v1alpha1.StandardOutList
+  - model_name: standard_out
+    oas_endpoint: /apps/stdout.eda.nokia.com/v1alpha1/namespaces/{namespace}/standardouts/{name}
+    oas_schema: com.nokia.eda.stdout.v1alpha1.StandardOut
+
+resources:
+  - model_name: cluster_standard_out
+    oas_endpoint: /apps/stdout.eda.nokia.com/v1alpha1/clusterstandardouts
+    oas_schema: com.nokia.eda.stdout.v1alpha1.ClusterStandardOut
+  - model_name: standard_out
+    oas_endpoint: /apps/stdout.eda.nokia.com/v1alpha1/namespaces/{namespace}/standardouts
+    oas_schema: com.nokia.eda.stdout.v1alpha1.StandardOut
+
+qualified:
+  datasources:
+    - oas_schema: IntentTargets
+      get: /apps/stdout.eda.nokia.com/v1alpha1/clusterstandardouts/{name}/_targets
+    - oas_schema: ResourceHistory
+      get: /apps/stdout.eda.nokia.com/v1alpha1/clusterstandardouts/{name}/_revs
+    - oas_schema: UIResult
+      get: /apps/stdout.eda.nokia.com/v1alpha1/_ui/{pathname}
+    - oas_schema: com.nokia.eda.stdout.v1alpha1.ClusterStandardOut_DeletedResources
+      get: /apps/stdout.eda.nokia.com/v1alpha1/clusterstandardouts/_deleted
+    - oas_schema: com.nokia.eda.stdout.v1alpha1.StandardOut_DeletedResources
+      get: /apps/stdout.eda.nokia.com/v1alpha1/namespaces/{namespace}/standardouts/_deleted
+  resources:
